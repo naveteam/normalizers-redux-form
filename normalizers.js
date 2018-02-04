@@ -1,4 +1,5 @@
-export const normalizeDate = value => {
+// dd/mm/yyyy
+export const DATE = value => {
     if (!value) {
       return value
     }
@@ -12,7 +13,8 @@ export const normalizeDate = value => {
     return `${onlyNums.slice(0, 2)}/${onlyNums.slice(2, 4)}/${onlyNums.slice(4, 8)}`
 }
 
-export const normalizeCPF = value => {
+// 123.456.789-10
+export const CPF = value => {
   if (!value) {
     return value
   }
@@ -29,7 +31,9 @@ export const normalizeCPF = value => {
   return `${onlyNums.slice(0, 3)}.${onlyNums.slice(3, 6)}.${onlyNums.slice(6, 9)}-${onlyNums.slice(9, 11)}`
 }
 
-export const normalizeCRP = value => {
+// Conselho regional de psicologia
+// 123/123456789
+export const CRP = value => {
   if (!value) {
     return value
   }
@@ -43,7 +47,8 @@ export const normalizeCRP = value => {
   return `${onlyNums.slice(0, 2)}/${onlyNums.slice(2, 20)}`
 }
 
-export const normalizeCEP = value => {
+// 123456-789
+export const CEP = value => {
   if (!value) {
     return value
   }
@@ -59,7 +64,7 @@ export const normalizeCEP = value => {
 }
 
 //(99) 9 9999-9999
-export const normalizePhone = value => {
+export const PHONE = value => {
   if (!value) {
     return value
   }
@@ -87,7 +92,7 @@ export const normalizePhone = value => {
 }
 
 //9?9?9?9?9?9?9?9?9?9?9?9?9?9?
-export const normalizeInternationalPhone = value => {
+export const INTERNATIONAL_PHONE = value => {
   if (!value) {
     return value
   }
@@ -97,7 +102,7 @@ export const normalizeInternationalPhone = value => {
 }
 
 //(99) 99999-9999
-export const normalizeCellPhone = value => {
+export const CELLPHONE = value => {
   if (!value) {
     return value
   }
@@ -120,7 +125,7 @@ export const normalizeCellPhone = value => {
 }
 
 //9999 9999 9999 9999
-export const numberCreditCard = value => {
+export const NUMBER_CREDIT_CARD = value => {
   if (!value) {
     return value
   }
@@ -132,7 +137,7 @@ export const numberCreditCard = value => {
 }
 
 //  mm/aa
-export const overdueCreditCard = value => {
+export const OVERDUE_CREDIT_CARD = value => {
   if (!value) {
     return value
   }
@@ -152,7 +157,7 @@ export const overdueCreditCard = value => {
 }
 
 // 99999-9
-export const bankAccount = value => {
+export const BANK_ACCOUNT = value => {
   if (!value) {
     return value;
   }
@@ -167,7 +172,8 @@ export const bankAccount = value => {
   }
 }
 
-export const bankAgency = value => {
+// 1234-56
+export const BANK_AGENCY = value => {
   if (!value) {
     return value;
   }

@@ -3,12 +3,12 @@
 example:
 ```jsx
 
-import { normalizeCPF } from './normalizers' 
+import { CPF } from './normalizers' 
 
 <Field
   component="input"
   name="cpf"
-  normalizer={normalizeCPF}
+  normalizer={CPF}
   type="text"
 />
 ```
